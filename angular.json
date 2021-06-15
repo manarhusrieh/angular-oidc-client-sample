@@ -21,7 +21,8 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/silent-renew.html"
             ],
             "styles": [
               "src/styles.css"
@@ -61,7 +62,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "oidc-client-test:build"
+            "browserTarget": "oidc-client-test:build",
+            "sslKey": "example.key",
+            "sslCert": "example.crt"
           },
           "configurations": {
             "production": {
